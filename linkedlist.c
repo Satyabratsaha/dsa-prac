@@ -1,5 +1,5 @@
-// #include <stdlib.h>
-// #include<stdio.h>
+#include <stdlib.h>
+#include<stdio.h>
 
 // * Singly LinkedList
 // # struct Node{
@@ -133,3 +133,41 @@
 //         temp=temp->ptr_2;
 //     }
 // }
+
+// * cyclic linkedlist
+// # head insertion
+struct Node{
+    int data;
+    struct Node *ptr;
+};
+int main(){
+    struct Node *head, *new_N, *tail;
+    head = NULL;
+    tail = NULL;
+    while(1){
+        new_N = (struct Node*)malloc(sizeof(struct Node));
+        printf("Enter data(or press q to exit) ");
+        if(scanf("%d", &new_N->data) != 1){
+            break;
+        }
+        if(head == NULL){
+            head = new_N;
+            tail = new_N;
+            tail->ptr = head;
+        }
+        else{
+            tail->ptr = new_N;
+            new_N->ptr = head;
+            tail = new_N;
+        }
+    }
+    struct Node *tracker;
+    tracker = head;
+    while(tracker != NULL){
+        printf("%d ", tracker->data);
+        tracker = tracker->ptr;
+        if(tracker == head){
+            break;
+        }
+    }
+}
