@@ -14,4 +14,5 @@ int main(){
         }
     } 
     printf("second largest is %d\n", max_2);
-} 
+    printf("using the vim keybindings here");
+}

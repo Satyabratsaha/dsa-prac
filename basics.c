@@ -8,8 +8,8 @@
 //     }
 //     return 0;
 // }
-
-//implementaion of sum of N natural numbers formula
+//
+// // implementaion of sum of N natural numbers formula
 // #include<stdio.h>
 // int main(){
 //     int sum=0, N;
@@ -27,3 +27,9 @@
 //     printf("%d",(N*(N+1))/2);
 //     return 0;
 // }
+
+#include <stdio.h>
+int main(){
+    printf("hello world");
+    int
+}
